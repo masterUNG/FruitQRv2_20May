@@ -48,9 +48,28 @@ public class MainFragment extends Fragment {
         loginController();
 
 
+//        RePassword Controller
+        rePasswordController();
 
 
     }   //Main Method เมธอดแรกในการทำงาน
+
+    private void rePasswordController() {
+        TextView textView = getView().findViewById(R.id.txtRePassword);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentMainFragment, new CheckUserAnPhoneFragment())
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+    }
 
     private void checkStatus() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
