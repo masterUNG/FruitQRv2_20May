@@ -41,6 +41,8 @@ public class CheckUserAnPhoneFragment extends Fragment {
                 EditText userEditText = getView().findViewById(R.id.edtUser);
                 EditText phoneEditText = getView().findViewById(R.id.edtPhone);
 
+
+
             }
         });
     }
